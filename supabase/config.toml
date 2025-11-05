@@ -1,0 +1,21 @@
+# Supabase local development configuration
+
+project_id = "support-tickets"
+
+[api]
+enabled = true
+port = 54341
+schemas = ["public"]
+max_rows = 1000
+
+[db]
+port = 54342
+major_version = 15
+
+[studio]
+enabled = true
+port = 54343
+
+[auth]
+enabled = true
+site_url = "http://localhost:3002"
