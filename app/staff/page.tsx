@@ -1,6 +1,9 @@
 import { supabase } from '@/lib/supabase';
 import Link from 'next/link';
 
+// Disable caching for real-time dashboard updates
+export const revalidate = 0;
+
 async function getTicketStats() {
   const { data: tickets } = await supabase
     .from('tickets')

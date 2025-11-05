@@ -1,6 +1,9 @@
 import { supabase } from '@/lib/supabase';
 import Link from 'next/link';
 
+// Disable caching for real-time ticket updates
+export const revalidate = 0;
+
 async function getTickets(status?: string) {
   let query = supabase
     .from('tickets')
